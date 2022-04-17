@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Bundle",
+    "price": "$499",
+    "description": "In this bundle you will get full wedding shoot. It will include mehendi night shoot, wedding night shoot, outdoor shoot, full wedding cinematic video album.As gift I also provide 50 specially edited high quality couple portrait shots.",
+    "img": "https://img.freepik.com/free-photo/bride-groom-wheelchair-sit-kissing-bench-park_8353-7098.jpg?t=st=1650185577~exp=1650186177~hmac=ba686bdbef23b508b4806f223dd41cd2f260fece4c1ca3202c65ec2a4fd6acbc&w=740"
+  },
+  {
+    "id": 2,
+    "name": "Portrait Bundle",
+    "price": "$199",
+    "description": "If you are looking for personalize single,couple or family portrait photos then this bundle is only meant for you. You will get 100 portrait shots with different angle and view. Also you will get 25 specially edited photos. Custom edits are also available.",
+    "img": "https://img.freepik.com/free-photo/portrait-smiling-young-man-with-his-arm-crossed-standing-against-orange-backdrop_23-2148119780.jpg?t=st=1650186034~exp=1650186634~hmac=3b3c04f77964344dd1a4f49f3217663b9213ddf70f7f12ef09ac195f43a1f698&w=740"
+  },
+  {
+    "id": 3,
+    "name": "Landscape Bundle",
+    "price": "$299",
+    "description": "If you are interested in collecting beautiful landscapes your place/land or any specific place you like then this bundle is the one you are looking for. I will take beautiful landscapes of the place with different light and weather conditions. The bundle consists total of 100 high quality clicked photos.",
+    "img": "https://img.freepik.com/free-photo/white-painted-buildings-beside-body-water_422131-9.jpg?t=st=1650186369~exp=1650186969~hmac=4690d1ace56040cbd1dcf1ea9a31636499ae12ff536cd675d1173f61eab4e6f0&w=740"
+  }
+]
