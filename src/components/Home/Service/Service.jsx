@@ -10,7 +10,7 @@ const Service = ({service}) => {
      navigate(`/service/${id}`);
    };
    return (
-     <div className="service">
+     <div className="service mx-auto">
        <Card style={{ width: "18rem" }}>
          <Card.Img variant="top" src={img} />
          <Card.Body className="text-start">

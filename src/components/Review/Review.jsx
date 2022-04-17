@@ -5,7 +5,7 @@ const Review = ({review}) => {
 
    return (
      <div>
-       <div className="shadow-xl rounded-2xl w-[250px] bg-white p-4 border-2 border-red-200 my-3">
+       <div className="shadow-xl rounded-2xl mr-2  bg-white p-3 border-2 border-red-200 my-3">
          <div className="justify-between items-center">
            <div className="flex-shrink-0">
              <div>

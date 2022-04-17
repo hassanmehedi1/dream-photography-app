@@ -12,9 +12,9 @@ const Reviews = () => {
        });
    }, []);
    return (
-     <div className='text-lg' id='reviews'>
+     <div className='text-lg container' id='reviews'>
        <h2 className='flex justify-center text-2xl font-semibold text-blue-700'>My Client Reviews</h2>
-       <div className="grid grid-cols-1 md:grid-cols-2 place-content-center ml-10 lg:grid-cols-3 gap-2">
+       <div className="grid grid-cols-1 md:grid-cols-2 place-content-center lg:grid-cols-3 mr-0">
          {reviews.map((review) => (
            <Review key={review.id} review={review}></Review>
          ))}
