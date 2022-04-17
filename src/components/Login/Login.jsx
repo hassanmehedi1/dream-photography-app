@@ -21,7 +21,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/home";
 
   let errorMsg;
   if (error) {
@@ -41,14 +41,17 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
+    
     signInWithEmailAndPassword(email, password);
+    toast.success("Yay Congratulations 🎉");
+    
   };
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      toast.info("Email Sent");
+      toast.info("Email Sent 😃");
     } else {
       toast.error("Please Enter Your Email address");
     }

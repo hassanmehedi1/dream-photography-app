@@ -22,7 +22,7 @@ const Header = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand className="d-flex align-items-center" as={Link} to="/">
+          <Navbar.Brand className="d-flex align-items-center" as={Link} to="/home">
             <img height={65} width={75} src={logo} alt="" />
             <p className="font-mono font-semibold text-2xl">Dream Photography</p>
           </Navbar.Brand>
