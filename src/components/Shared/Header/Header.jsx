@@ -24,7 +24,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand className="d-flex align-items-center" as={Link} to="/">
             <img height={65} width={75} src={logo} alt="" />
-            <p>Dream Photography</p>
+            <p className="font-mono font-semibold text-2xl">Dream Photography</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
