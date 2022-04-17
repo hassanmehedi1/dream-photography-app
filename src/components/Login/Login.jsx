@@ -6,55 +6,57 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
-   const [signInWithEmailAndPassword, user, loading, error] =
-     useSignInWithEmailAndPassword(auth);
-   const [sendPasswordResetEmail, sending, error1] =
-     useSendPasswordResetEmail(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, error1] =
+    useSendPasswordResetEmail(auth);
 
-   const emailRef = useRef("");
-   const passwordRef = useRef("");
-   const navigate = useNavigate();
-   const location = useLocation();
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-   let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/";
 
-   let errorMsg;
-   if (error) {
-     errorMsg = (
-       <div>
-         <p className="text-danger">Error: {error?.message}</p>
-       </div>
-     );
-   }
+  let errorMsg;
+  if (error) {
+    errorMsg = (
+      <div>
+        <p className="text-danger">Error: {error?.message}</p>
+      </div>
+    );
+  }
 
-   if (user) {
-     navigate(from, { replace: true });
-   }
+  if (user) {
+    navigate(from, { replace: true });
+  }
 
-   const handleSignIn = (event) => {
-     event.preventDefault();
-     const email = emailRef.current.value;
-     const password = passwordRef.current.value;
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
-     signInWithEmailAndPassword(email, password);
-   };
+    signInWithEmailAndPassword(email, password);
+  };
 
-   const resetPassword = async () => {
-     const email = emailRef.current.value;
-     if (email) {
-       await sendPasswordResetEmail(email);
-       alert("Email Sent");
-     } else {
-       alert("Please Enter Your Email address");
-     }
-   };
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast.info("Email Sent");
+    } else {
+      toast.error("Please Enter Your Email address");
+    }
+  };
 
-   const navigateReg = (event) => {
-     navigate("/register");
-   };
+  const navigateReg = (event) => {
+    navigate("/register");
+  };
 
   return (
     <div className="w-50 mx-auto">
@@ -116,6 +118,7 @@ const Login = () => {
         </button>
       </p>
       <SocialLogin></SocialLogin>
+      <ToastContainer position="top-center"></ToastContainer>
     </div>
   );
 };
