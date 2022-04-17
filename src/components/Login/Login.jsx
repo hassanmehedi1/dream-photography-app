@@ -68,26 +68,20 @@ const Login = () => {
       </h2>
       <Form onSubmit={handleSignIn}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="text-gray-600 font-mono font-semibold">
-            Email address
-          </Form.Label>
           <Form.Control
             ref={emailRef}
             type="email"
             className="rounded-md"
-            placeholder="Enter email"
+            placeholder="Enter Your Email"
             required
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label className="text-gray-600 font-mono font-semibold">
-            Password
-          </Form.Label>
           <Form.Control
             ref={passwordRef}
             type="password"
-            placeholder="Password"
+            placeholder="Enter Your Password"
             required
           />
         </Form.Group>

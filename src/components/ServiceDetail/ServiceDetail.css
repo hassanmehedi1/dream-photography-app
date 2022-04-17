@@ -1,0 +1,11 @@
+label{
+    display: inline-block;
+    float: right;
+    clear: right;
+    width: 95px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: center;
+}
