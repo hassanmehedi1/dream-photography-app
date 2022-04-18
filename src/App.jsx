@@ -11,6 +11,7 @@ import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import CheckOut from './components/CheckOut/CheckOut';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Blog from './components/Blog/Blog';
+import About from './components/About/About';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           }
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
