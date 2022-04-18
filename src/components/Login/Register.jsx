@@ -18,6 +18,15 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  let errorMsg;
+  if (error) {
+    errorMsg = (
+      <div>
+        <p className="text-danger">Error: {error?.message}</p>
+      </div>
+    );
+  }
+
   const navigateLogin = () => {
     navigate("/login");
   };
@@ -36,8 +45,12 @@ const Register = () => {
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
     //  alert("Updated profile");
-    navigate("/home");
+    
   };
+  
+  if(user){
+    navigate("/login");
+  }
 
   return (
     <div className="register-form">
@@ -78,6 +91,7 @@ const Register = () => {
           value="Register"
         />
       </form>
+      {errorMsg}
       <p>
         Already have an account?{" "}
         <Link
