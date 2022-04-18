@@ -33,3 +33,6 @@
 - Tailwind
 - React Toastify
 - Github
+
+### Info for examiner
+- There is little bug in register page in accept terms and condition section. it happens with firebase hosting only. But If you reload the page it will be fixed.
