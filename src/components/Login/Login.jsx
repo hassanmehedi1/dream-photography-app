@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button, Form, Toast } from "react-bootstrap";
 import {
   useSendPasswordResetEmail,
@@ -32,9 +32,11 @@ const Login = () => {
     );
   }
 
-  if (user) {
-    navigate(from, { replace: true });
-  }
+  useEffect(()=>{
+    if(user){
+      navigate(from, { replace: true });
+    }
+  },[user])
 
   const handleSignIn = (event) => {
     event.preventDefault();

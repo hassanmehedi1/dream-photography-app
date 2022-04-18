@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import google from "../../../images/social/google2.png";
 import fb from "../../../images/social/fb.png";
 import git from "../../../images/social/github.png";
@@ -34,10 +34,11 @@ const SocialLogin = () => {
     return <Loading></Loading>;
   }
 
+
   if (user || user1) {
     navigate(from, { replace: true });
   }
-
+  
   return (
     <div>
       <div className="d-flex align-items-center">

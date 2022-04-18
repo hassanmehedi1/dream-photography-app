@@ -2,16 +2,16 @@ import React from 'react';
 
 const Blog = () => {
    return (
-     <section class="px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2">
-       <div class="">
+     <section className="px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2">
+       <div >
          <h2 className="text-center font-mono text-4xl font-semibold">
            My Blogs
          </h2>
          <div>
-           <p class="mt-10 mb-3 font-semibold text-2xl text-gray-900">
+           <p className="mt-10 mb-3 font-semibold text-2xl text-gray-900">
              Difference between Authorization and Authentication.
            </p>
-           <p class="text-gray-800 grid">
+           <p className="text-gray-800 grid">
              <span className="font-mono font-semibold text-xl">
                Authentication:
              </span>
@@ -36,11 +36,11 @@ const Blog = () => {
              you must grant admin@ access to Box and Google Drive. Under the
              Cloud Accounts page, you can authorize users.
            </p>
-           <p class="mt-10 mb-3 text-2xl font-semibold text-gray-900">
+           <p className="mt-10 mb-3 text-2xl font-semibold text-gray-900">
              Why am I using firebase? What other options do I have to implement
              authentication?
            </p>
-           <p class="text-gray-700">
+           <p className="text-gray-700">
              Indeed, using Firebase as a backend for dynamic apps is a less
              technical and time-consuming alternative to building full-fledged
              backend code. You might also want to use this tool if you intend to
@@ -67,11 +67,11 @@ const Blog = () => {
                <li>SashiDo</li>
              </ol>
            </p>
-           <p class="mt-10 mb-3 text-2xl font-semibold text-gray-900">
+           <p className="mt-10 mb-3 text-2xl font-semibold text-gray-900">
              What other services does firebase provide other than
              authentication?
            </p>
-           <p class="text-gray-700">
+           <p className="text-gray-700">
              Firebase was created by Firebase Inc. and eventually purchased by
              Google. It offers a variety of services to assist you in developing
              high-quality mobile and web applications to help you build your
