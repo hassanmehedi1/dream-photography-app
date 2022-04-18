@@ -154,22 +154,22 @@ const Footer = () => {
               Services
             </h6>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
+              <a href="/service/${id}" className="text-gray-600">
                 Wedding
               </a>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
+              <a href="/service/${id}" className="text-gray-600">
                 Portrait
               </a>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
+              <a href="/service/${id}" className="text-gray-600">
                 Landscape
               </a>
             </p>
             <p>
-              <a href="#!" className="text-gray-600">
+              <a href="/service/${id}" className="text-gray-600">
                 Wild
               </a>
             </p>
