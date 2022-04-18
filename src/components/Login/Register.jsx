@@ -41,7 +41,9 @@ const Register = () => {
 
   return (
     <div className="register-form">
-      <h2 className="text-center text-2xl font-semibold text-blue-500">Please Register</h2>
+      <h2 className="text-center text-2xl font-semibold text-blue-500">
+        Please Register
+      </h2>
       <form onSubmit={handleRegister}>
         <input type="text" name="name" placeholder="Your Name" />
 
@@ -53,16 +55,22 @@ const Register = () => {
           placeholder="Password"
           required
         />
-        <input
-          onClick={() => setAgree(!agree)}
-          type="checkbox"
-          name="terms"
-          id="terms"
-        />
+        <div className="flex">
+          <div>
+            <input
+              onClick={() => setAgree(!agree)}
+              type="checkbox"
+              name="terms"
+              id="terms"
+            />
+          </div>
+          <div>
+            <p className={agree ? "ps-2 text-success" : "ps-2"} htmlFor="terms">
+              Accept Terms and Conditions
+            </p>
+          </div>
+        </div>
 
-        <label className={agree ? "ps-2 text-success" : "ps-2"} htmlFor="terms">
-          Accept Terms and Conditions
-        </label>
         <input
           disabled={!agree}
           className="w-50 mx-auto d-block mb-2 mt-2 btn btn-primary text-blue-500"
