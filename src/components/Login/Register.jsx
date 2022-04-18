@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import {
   useCreateUserWithEmailAndPassword,
@@ -17,6 +17,9 @@ const Register = () => {
   const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/home";
 
   let errorMsg;
   if (error) {
@@ -30,10 +33,6 @@ const Register = () => {
   const navigateLogin = () => {
     navigate("/login");
   };
-
-  if (user) {
-    console.log(user);
-  }
 
   const handleRegister = async (event) => {
     event.preventDefault();
@@ -49,7 +48,7 @@ const Register = () => {
   };
   
   if(user){
-    navigate("/login");
+    navigate(from, { replace: true });
   }
 
   return (
