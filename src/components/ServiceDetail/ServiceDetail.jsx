@@ -27,18 +27,18 @@ const ServiceDetail = () => {
       setPhone(event.target.value);
     };
 
-    const handleShipping = (event) => {
+    const handleCheckOut = (event) => {
       event.preventDefault();
-      const shipping = { name, address, phone };
+      const CheckOut = { name, address, phone };
       navigate('/checkout')
     };
    return (
      <div className="grid justify-center form-container">
        <div className="">
          <h2 className="form-title text-3xl font-semibold text-center">
-           Shipping Information
+           CheckOut Information
          </h2>
-         <form className="inline-block" onSubmit={handleShipping}>
+         <form className="inline-block" onSubmit={handleCheckOut}>
            <div className="input-group mb-3 mt-3">
              <label
                className="mx-2 font-mono font-semibold text-xl"
@@ -113,15 +113,3 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
-
-{/* <div>
-       <div className="text-center mt-4">
-         <div className='text-2xl font-mono font-semibold'>
-           <h2>Thank You for Choosing This Bundle</h2>
-           <h4>Please Press Checkout For order Completion</h4>
-         </div>
-         <Link to="/checkout">
-           <button className="btn btn-primary mt-5">Proceed Checkout</button>
-         </Link>
-       </div>
-    </div> */}

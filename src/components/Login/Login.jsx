@@ -96,7 +96,7 @@ const Login = () => {
       </Form>
       {errorMsg}
       <p className="text-danger">
-        New to Car Servicing?{" "}
+        New to Dream Photography?{" "}
         <Link
           to="/register"
           className="text-success pe-auto text-decoration-none"
